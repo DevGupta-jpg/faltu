@@ -1,16 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Render Practice</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Flask Practice Website</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Flask Web App</h1>
-        <p>My first Flask app deployed on Render.</p>
-        <button>Practice Project</button>
-    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            FlaskApp
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="banner" id="home">
+
+        <div class="banner-content">
+
+            <h1>Welcome to My Flask Website</h1>
+
+            <p>
+                This is a simple Flask web application
+                created for practice and Render deployment.
+            </p>
+
+            <a href="#contact" class="btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery-section" id="gallery">
+
+        <div class="section-heading">
+
+            <h2>Our Gallery</h2>
+
+            <p>
+                Some beautiful images for our website.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                     alt="Gallery Image">
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e"
+                     alt="Gallery Image">
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                     alt="Gallery Image">
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+                     alt="Gallery Image">
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                     alt="Gallery Image">
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                     alt="Gallery Image">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FORM ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="section-heading">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Fill out the form and send us a message.
+            </p>
+
+        </div>
+
+
+        <form action="/contact" method="POST">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>FlaskApp</h3>
+
+            <p>
+                A simple Flask practice website.
+            </p>
+
+            <p class="copyright">
+                © 2026 FlaskApp. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
